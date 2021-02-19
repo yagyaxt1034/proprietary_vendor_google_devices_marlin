@@ -241,7 +241,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/marlin/proprietary/vendor/etc/permissions/rcsservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/rcsservice.xml \
     vendor/google_devices/marlin/proprietary/vendor/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/telephonyservice.xml \
     vendor/google_devices/marlin/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
-    vendor/google_devices/marlin/proprietary/vendor/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml \
     vendor/google_devices/marlin/proprietary/vendor/etc/qfipsverify/bootimg.hmac:$(TARGET_COPY_OUT_VENDOR)/etc/qfipsverify/bootimg.hmac \
     vendor/google_devices/marlin/proprietary/vendor/etc/qfipsverify/qfipsverify.hmac:$(TARGET_COPY_OUT_VENDOR)/etc/qfipsverify/qfipsverify.hmac \
     vendor/google_devices/marlin/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
@@ -361,7 +360,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/marlin/proprietary/vendor/firmware/slpi.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/slpi.mdt \
     vendor/google_devices/marlin/proprietary/vendor/firmware/slpiver.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/slpiver.cfg \
     vendor/google_devices/marlin/proprietary/vendor/firmware/synaptics_bl71.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_bl71.img \
-    vendor/google_devices/marlin/proprietary/vendor/firmware/synaptics_bl77.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_bl77.img \
     vendor/google_devices/marlin/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
     vendor/google_devices/marlin/proprietary/vendor/firmware/utf30.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/utf30.bin \
     vendor/google_devices/marlin/proprietary/vendor/firmware/venus.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/venus.b00 \
@@ -821,6 +819,17 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/marlin/proprietary/vendor/qcril_database/upgrade/7_singapore_ecc_995.sql:$(TARGET_COPY_OUT_VENDOR)/qcril_database/upgrade/7_singapore_ecc_995.sql \
     vendor/google_devices/marlin/proprietary/vendor/qcril_database/upgrade/8_germany_ecc_110.sql:$(TARGET_COPY_OUT_VENDOR)/qcril_database/upgrade/8_germany_ecc_110.sql \
     vendor/google_devices/marlin/proprietary/vendor/qcril_database/upgrade/9_remove_germany_ecc_110.sql:$(TARGET_COPY_OUT_VENDOR)/qcril_database/upgrade/9_remove_germany_ecc_110.sql
+
+ifeq ($(TARGET_DEVICE),marlin)
+PRODUCT_COPY_FILES += \
+    vendor/google/marlin/proprietary/vendor/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml \
+    vendor/google/marlin/proprietary/vendor/firmware/synaptics_bl77.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_bl77.img
+endif
+
+ifeq ($(TARGET_DEVICE),sailfish)
+PRODUCT_COPY_FILES += \
+    vendor/google/marlin/proprietary/vendor/etc/qdcm_calib_data_S1_FHD_SAMSUNG_EA8064TG_5.0_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_S1_FHD_SAMSUNG_EA8064TG_5.0_command_mode_panel.xml
+endif
 
 PRODUCT_PACKAGES += \
     QAS_DVC_MSP \
