@@ -665,7 +665,6 @@ PRODUCT_COPY_FILES += \
     vendor/google_devices/marlin/proprietary/vendor/lib64/egl/libq3dtools_adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_adreno.so \
     vendor/google_devices/marlin/proprietary/vendor/lib64/egl/libq3dtools_esx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libq3dtools_esx.so \
     vendor/google_devices/marlin/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so \
-    vendor/google_devices/marlin/proprietary/vendor/lib64/hw/fingerprint.marlin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.marlin.so \
     vendor/google_devices/marlin/proprietary/vendor/lib64/hw/flp.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/flp.default.so \
     vendor/google_devices/marlin/proprietary/vendor/lib64/hw/gatekeeper.msm8996.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8996.so \
     vendor/google_devices/marlin/proprietary/vendor/lib64/hw/gps.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gps.default.so \
@@ -823,13 +822,15 @@ PRODUCT_COPY_FILES += \
 
 ifeq ($(TARGET_DEVICE),marlin)
 PRODUCT_COPY_FILES += \
-    vendor/google/marlin/proprietary/vendor/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml \
-    vendor/google/marlin/proprietary/vendor/firmware/synaptics_bl77.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_bl77.img
+    vendor/google_devices/marlin/proprietary/vendor/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml \
+    vendor/google_devices/marlin/proprietary/vendor/firmware/synaptics_bl77.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_bl77.img \
+    vendor/google_devices/marlin/proprietary/vendor/lib64/hw/fingerprint.marlin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.marlin.so
 endif
 
 ifeq ($(TARGET_DEVICE),sailfish)
 PRODUCT_COPY_FILES += \
-    vendor/google/marlin/proprietary/vendor/etc/qdcm_calib_data_S1_FHD_SAMSUNG_EA8064TG_5.0_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_S1_FHD_SAMSUNG_EA8064TG_5.0_command_mode_panel.xml
+    vendor/google_devices/marlin/proprietary/vendor/etc/qdcm_calib_data_S1_FHD_SAMSUNG_EA8064TG_5.0_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_S1_FHD_SAMSUNG_EA8064TG_5.0_command_mode_panel.xml \
+    vendor/google_devices/marlin/proprietary/vendor/lib64/hw/fingerprint.sailfish.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.sailfish.so
 endif
 
 PRODUCT_PACKAGES += \
